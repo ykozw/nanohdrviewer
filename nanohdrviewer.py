@@ -126,7 +126,7 @@ class HDRImageViewer(QMainWindow):
 		self.setWindowFlags(Qt.WindowStaysOnTopHint)
 
 	def open(self):
-		filename, _ = QFileDialog.getOpenFileName(self, "Open File", QDir.currentPath(), "HDR Image (*.hdr, *.exr)")
+		filename, _ = QFileDialog.getOpenFileName(self, "Open File", QDir.currentPath(),  "HDR Files (*.hdr);;EXR Files (*.exr)")
 		if filename:
 			if not self.imageLabel.load(filename):
 				QMessageBox.information(self, "hdrviewer", "Failed to load %s" % filename)
